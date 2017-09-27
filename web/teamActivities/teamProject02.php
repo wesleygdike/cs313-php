@@ -10,11 +10,11 @@
         <br>
         Major
         <br>
-        <input type="radio" name="major">Computer Science<br>
-        <input type="radio" name="major">Web Design and Development<br>
-        <input type="radio" name="major">Computer Informaion Technology<br>
-        <input type="radio" name="major">Computer Engineering
-        <br>Comments<br>
+        <input type="radio" value="Computer Science" name="major">Computer Science<br>
+        <input type="radio" value="Web Design and Development" name="major">Web Design and Development<br>
+        <input type="radio" value="Computer Informaion Technology" name="major">Computer Informaion Technology<br>
+        <input type="radio" value="Computer Engineering" name="major">Computer Engineering<br>
+        Comments<br>
         <textarea rows="4" cols="50" name="comments"></textarea>
         <input type="submit">
     </form>
