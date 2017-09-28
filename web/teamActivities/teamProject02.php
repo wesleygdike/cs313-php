@@ -17,13 +17,13 @@
         Comments<br>
         <textarea rows="4" cols="50" name="comments"></textarea>
         <p>I have been to these places:</p>
-        <input type="checkbox" value="North America" name="continent">North America<br>
-        <input type="checkbox" value="South America" name="continent">South America<br>
-        <input type="checkbox" value="Europe" name="continent">Europe<br>
-        <input type="checkbox" value="Asia" name="continent">Asia<br>
-        <input type="checkbox" value="Australia" name="continent">Australia<br>
-        <input type="checkbox" value="Africa" name="continent">Africa<br>
-        <input type="checkbox" value="Antarctica" name="continent">Antarctica<br>
+        <input type="checkbox" value="North America" name="continent[]">North America<br>
+        <input type="checkbox" value="South America" name="continent[]">South America<br>
+        <input type="checkbox" value="Europe" name="continent[]">Europe<br>
+        <input type="checkbox" value="Asia" name="continent[]">Asia<br>
+        <input type="checkbox" value="Australia" name="continent[]">Australia<br>
+        <input type="checkbox" value="Africa" name="continent[]">Africa<br>
+        <input type="checkbox" value="Antarctica" name="continent[]">Antarctica<br>
         <input type="submit">
     </form>
 
