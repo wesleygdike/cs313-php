@@ -1,6 +1,6 @@
-﻿<?php 
+﻿/*<?php 
     $continents = array($_POST["continents"]);
-?>
+?> */
 
 <html>
 <head>
@@ -14,11 +14,11 @@
     <?php echo $_POST["comments"]; ?><br>
     <?php echo $_POST["continents"]; ?><br>
     <p>I have been to these places:</p>
-    <?php
+    /*<?php
     foreach ($continents as $value) {
         echo $value <br>;
     }
-    ?>
+    ?>*/
     <?php
     foreach ($_POST["continents"] as $value) {
         echo $value <br>;
