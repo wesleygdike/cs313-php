@@ -18,6 +18,10 @@
         </tr>
         <?php endforeach; ?>
     </table>
-
+    <?php
+    foreach ($_POST["continents"] as $value) {
+        echo $value <br>;
+    }
+    ?>
 </body>
 </html>
