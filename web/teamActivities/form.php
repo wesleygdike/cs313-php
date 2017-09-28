@@ -8,5 +8,10 @@
     <a href="mailto:<?php echo $_POST["email"]; ?>?Subject=Hello%20again" target="_top">Send Mail To : <?php echo $_POST["email"]; ?></a><br>
     <?php echo $_POST["major"]; ?><br>
     <?php echo $_POST["comments"]; ?><br>
+    <?php echo $_POST["continents"]; ?><br>
+    <p>I have been to these places:<p>
+    foreach ($_POST["continents"] as $value) {
+        echo $value <br>;
+    }
 </body>
 </html>
