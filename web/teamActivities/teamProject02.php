@@ -16,6 +16,7 @@
         <input type="radio" value="Computer Engineering" name="major">Computer Engineering<br>
         Comments<br>
         <textarea rows="4" cols="50" name="comments"></textarea>
+        <p>I have been to these places:</p>
         <input type="checkbox" value="North America" name="continent">North America<br>
         <input type="checkbox" value="South America" name="continent">South America<br>
         <input type="checkbox" value="Europe" name="continent">Europe<br>

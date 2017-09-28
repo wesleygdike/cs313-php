@@ -9,7 +9,7 @@
     <?php echo $_POST["major"]; ?><br>
     <?php echo $_POST["comments"]; ?><br>
     <?php echo $_POST["continents"]; ?><br>
-    <p>I have been to these places:<p>
+    <p>I have been to these places:</p>
     foreach ($_POST["continents"] as $value) {
         echo $value <br>;
     }
