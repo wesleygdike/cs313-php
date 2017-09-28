@@ -10,6 +10,7 @@
     <?php echo $_POST["major"]; ?><br>
     <?php echo $_POST["comments"]; ?><br>
     <?php var_dump($_POST["continent"]); ?><br>
+    <?php echo $_POST["continent"]; ?><br>
     <p>I have been to these places:</p>
     <table>
         <?php foreach($_POST["continent"] as $key=>$value): ?>
