@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 28, 2017, 7:44:57 PM
+    Author     : Wesley Dike
+*/
+
+﻿body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+}
+
+p {
+    font-size: 16px;
+}
+
+.margin {
+    margin-bottom: 45px;
+}
+
+.bg-1 {
+    background-color: pink; /* Pink */
+    color: darkmagenta;
+}
+
+.bg-2 {
+    background-color: darkorchid; /* Purple */
+    color: grey;
+}
+
+.bg-3 {
+    background-color: whitesmoke; /* White */
+    color: pink;
+}
+
+.bg-4 {
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar-btn {
+    width: 75%;
+    background-color: lightcoral;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.left-align {
+    float: left;
+}
+
+.right-align {
+    float: right;
+}
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+
+.fancy-text {
+    font-size: 160px;
+    font-family: fantasy;
+}
+
+.checkme-image {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 32px;
+    right: 70px;
+    opacity: 0.1;
+}
+
+.checkme-pic {
+
+}
+
+
