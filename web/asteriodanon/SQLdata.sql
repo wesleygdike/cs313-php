@@ -21,13 +21,13 @@ flyingObject    int REFERENCES flying_Object(obj_id)
 );
 
 CREATE TABLE user_input (
-input_id
+input_id int,
 booster int,
 turn    int,
 fire    int
 );
 
-CREATE TABLE user (
+CREATE TABLE users (
 user_id     int PRIMARY KEY,
 user_name   varchar(28) NOT NULL,
 score       int NOT NULL,
