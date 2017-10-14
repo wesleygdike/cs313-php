@@ -17,7 +17,7 @@ obj_type    int  --ASTEROID=0, SHIP=1
 CREATE TABLE asteroid (
 asteroid_id int PRIMARY KEY,
 point_value int,
-flyingObject    int REFERENCES flyingObject(obj_id)
+flyingObject    int REFERENCES flying_Object(obj_id)
 );
 
 CREATE TABLE user_input (
@@ -31,7 +31,7 @@ CREATE TABLE user (
 user_id     int PRIMARY KEY,
 user_name   varchar(28) NOT NULL,
 score       int NOT NULL,
-flyingObject    int REFERENCES flyingObject(obj_id),
+flyingObject    int REFERENCES flying_Object(obj_id),
 bullets     int REFERENCES bullets(bullet_list_id)
 user_input  int REFERENCES inputs(input_id),
 user_state  int
