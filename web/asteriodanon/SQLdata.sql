@@ -33,7 +33,7 @@ user_name   varchar(28) NOT NULL,
 score       int NOT NULL,
 flyingObject    int REFERENCES flying_Object(obj_id),
 bullets     int REFERENCES bullets(bullet_list_id)
-user_input  int REFERENCES user_input(input_id),
+user_input_id  int REFERENCES user_input(input_id),
 user_state  int
 );
 
