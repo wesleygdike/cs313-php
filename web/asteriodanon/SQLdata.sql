@@ -12,7 +12,7 @@ user_state  int
 );
 
 CREATE TABLE flying_Object (
-obj_id     int PRIMARY KEY,
+obj_id     SERIAL PRIMARY KEY NOT NULL,
 xloc        int, --set min max for all locations
 yloc        int, --set min max for all locations
 xvel        int, --set min max for all velocities

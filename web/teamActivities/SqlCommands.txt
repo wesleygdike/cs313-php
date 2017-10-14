@@ -1,2 +1,2 @@
 //loads the text of a sql file into the database.
-type "C:\Users\Wesley Dike\cs313-php\web\teamActivities\teamProject03.sql"|heroku pg:psql
+type "C:\Users\Wesley Dike\cs313-php\web\asteriodanon\SQLdata.sql"|heroku pg:psql
