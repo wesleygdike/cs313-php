@@ -37,7 +37,7 @@
             <th>Object Type Identifier</th>
           </tr>';
 
-        foreach ($db->query('SELECT * FROM flying_objects') as $row)
+        foreach ($db->query('SELECT * FROM flying_object;') as $row)
         {
             //add a row to the table for each flying_object
                 echo '<tr><td>' . $row['obj_id'] . '</td>'. 
