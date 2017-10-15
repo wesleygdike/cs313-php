@@ -15,6 +15,22 @@ var scene = {
     }
 };
 
+function input(event) {
+    alert(event.key);
+    if (event.key == "w") {
+        event.target.valueOf("w");
+    }
+    if (event.key == "a") {
+        event.target.valueOf("a");
+    }
+    if (event.key == "s") {
+        event.target.valueOf("s");
+    }
+    if (event.key == "d") {
+        event.target.valueOf("d");
+    }
+}
+
 var components = [new component(0,20,500,500), 
                   new component(0,20,250,250)];
 

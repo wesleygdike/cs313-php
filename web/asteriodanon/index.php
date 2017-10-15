@@ -5,7 +5,7 @@
         <title>Asteriodanon</title>
     <script src="astroScript.js"></script>
     </head>
-    <body onload="/*startGame()*/">
+    <body onload="/*startGame()*/" onkeypress="input(event)">
         <div id="canvasholder">
             <!-- Canvas will go here -->
         </div>
