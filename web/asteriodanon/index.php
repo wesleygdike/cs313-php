@@ -41,7 +41,6 @@
         {
             //add a row to the table for each flying_object
                 echo '<tr><td>' . $row['obj_id'] . '</td>'. 
-                        '<td>' . $row['obj_id'] . '</td>'.
                         '<td>' . $row['xloc'] . '</td>'.
                         '<td>' . $row['yloc'] . '</td>'.
                         '<td>' . $row['xvel'] . '</td>'.

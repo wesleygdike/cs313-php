@@ -21,7 +21,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 echo "<h2>Scripture Resources</h2>";
 
-        foreach ($db->query('SELECT * FROM flying_object') as $row)
+        foreach ($db->query('SELECT * FROM flying_object;') as $row)
         {
                 echo '<div><b>' . $row['book'] . ' '. $row['chapter'] . ":" . $row['verse'] . '</b> - "' . $row['content'] . '"';
         }
