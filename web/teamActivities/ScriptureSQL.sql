@@ -1,6 +1,6 @@
 
 CREATE TABLE scriptures(
-	id			SERIAL PRIMARY KEY,
+	id		SERIAL PRIMARY KEY,
 	book		VARCHAR(32) NOT NULL,
 	chapter		INT NOT NULL,
 	verse		INT NOT NULL,
@@ -38,3 +38,24 @@ INSERT INTO scriptures (
   , 9
   , 'He is the light and the life of the world; yea, a light that is endless, that can never be darkened; yea, and also a life which is endless, that there can be no more death.'
   );
+
+CREATE TABLE topic(
+    id			SERIAL PRIMARY KEY,
+    name		VARCHAR(32) NOT NULL
+);
+
+INSERT INTO topic(
+    topic)
+    VALUES 
+    ('Faith'),
+    ('Sacrifice'),
+    ('Charity');
+
+CREATE TABLE temp_table (
+    id                  SERIAL PRIMARY KEY,
+    scripture_id        INT REFERENCES scriptures(id),
+    topic_id            INT REFERENCES topic(id)
+);
+
+GRANT SELECT, INSERT, UPDATE ON ON TABLES IN SCHEMA public TO my_user;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO my_user;
