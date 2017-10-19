@@ -31,7 +31,7 @@
                 <?php
                     foreach ($db->query('SELECT * FROM topic;') as $checkbox)
                     {
-                        echo '<input type="checkbox" name="topic" value="' . $checkbox['name'] . '"><br/>';
+                        echo '<input type="checkbox" name="topic" value="' . $checkbox . '"> <br/>';
                     }
                 ?>
                 
