@@ -21,7 +21,7 @@
         ?>
         <h1>ENTER SCRIPTURE DATA</h1>
         <div>
-            <<form action="showScriptures.php" method="POST">
+            <form action="showScriptures.php" method="POST">
                 Book:<input type="text" name="book"><br/>
                 Chapter:<input type="number" name="chapter"><br/>
                 Verse:<input type="number" name="verse"><br/>
@@ -31,7 +31,7 @@
                 <?php
                     foreach ($db->query('SELECT * FROM topic;') as $checkbox)
                     {
-                        echo '<input type=checkbox name=topic value=' . $checkbox['name'] . '><br/>';
+                        echo '<input type="checkbox" name="topic" value="' . $checkbox['name'] . '"><br/>';
                     }
                 ?>
                 

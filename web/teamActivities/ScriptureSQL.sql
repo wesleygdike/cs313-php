@@ -44,8 +44,7 @@ CREATE TABLE topic(
     name		VARCHAR(32) NOT NULL
 );
 
-INSERT INTO topic(
-    topic)
+INSERT INTO topic(name)
     VALUES 
     ('Faith'),
     ('Sacrifice'),
@@ -57,5 +56,3 @@ CREATE TABLE temp_table (
     topic_id            INT REFERENCES topic(id)
 );
 
-GRANT SELECT, INSERT, UPDATE ON ON TABLES IN SCHEMA public TO my_user;
-GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO my_user;
