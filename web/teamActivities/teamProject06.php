@@ -25,13 +25,13 @@
                 Book:<input type="text" name="book"><br/>
                 Chapter:<input type="number" name="chapter"><br/>
                 Verse:<input type="number" name="verse"><br/>
-                Content:<input type="text" name="content"><br/>
+                Content:<textarea name="content" rows="5" cols="40"></textarea><br/>
                 
                 Select Topics that apply:<br/>
                 <?php
                     foreach ($db->query('SELECT * FROM topic;') as $checkbox)
                     {
-                        echo '<input type="checkbox" name="topic" value="' . $checkbox['name'] . '"> ' . $checkbox['name'] . '<br/>';
+                        echo '<input type="checkbox" name="topics[]" value="' . $checkbox['id'] . '"> ' . $checkbox['name'] . '<br/>';
                     }
                 ?>
                 
