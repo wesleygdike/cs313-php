@@ -10,5 +10,6 @@ include __DIR__ . '/blocks/header.php';
         <?php include __DIR__ . '/blocks/login.php'; ?>
         <!-- Instructions Section -->
         
+        <?php include __DIR__ . '/blocks/footer.php'; ?>
     </body>
 </html>
