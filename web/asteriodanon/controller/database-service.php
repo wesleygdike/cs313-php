@@ -15,6 +15,7 @@ function databaseConn() {
     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
     }
     catch (PDOException $ex) {
+        echo 'Failed Database Connection';
         //Display error with error page
     }
     return $db;

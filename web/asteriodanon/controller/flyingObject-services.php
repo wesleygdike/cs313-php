@@ -7,6 +7,7 @@ function getFlyingObj() {
         $sql = "SELECT * FROM flying_Object";
         $stmt = $db->query($sql);      
         $info = $stmt->fetchAll();
+        echo $info;
     } catch (PDOException $ex) {
       //Display Error Msg.
     }
