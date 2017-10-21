@@ -43,8 +43,8 @@ try {
     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
     // set the PDO error mode to exception
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO scriptures (book, chapter, verse, content),
-    VALUES ($book, $chapter, $verse, $content)";
+    $sql = "INSERT INTO scriptures(book, chapter, verse, content)
+    VALUES($book, $chapter, $verse, $content)";
     // use exec() because no results are returned
     $db->exec($sql);
     echo "New record created successfully";
