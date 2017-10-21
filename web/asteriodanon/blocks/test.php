@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-sm-4">
             <?php 
+            
                 $dbUrl = getenv('DATABASE_URL');
 
     $dbopts = parse_url($dbUrl);
@@ -20,7 +21,7 @@
         echo 'Failed Database Connection';
         //Display error with error page
     }
-    echo $db;
+    echo var_dump($db);
             ?>
         </div>
     </div>

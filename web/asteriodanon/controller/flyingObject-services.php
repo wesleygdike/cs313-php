@@ -4,7 +4,7 @@ function getFlyingObj() {
     $db = databaseConn();
     //return $db->query('SELECT * FROM flying_object;');
      try {
-        $sql = "SELECT * FROM flying_Object";
+        $sql = "SELECT * FROM flying_Object;";
         $stmt = $db->query($sql);      
         $info = $stmt->fetchAll();
         echo $info;
