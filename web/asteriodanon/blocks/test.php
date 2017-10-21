@@ -4,7 +4,6 @@
         <div class="col-sm-4">
             <?php 
             	$db = NULL;
-	try {
 		// default Heroku Postgres configuration URL
 		$dbUrl = getenv('DATABASE_URL');
 		if (!isset($dbUrl) || empty($dbUrl)) {
@@ -20,27 +19,11 @@
 		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 		// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
 		$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	} 
-try{
 	$statement = $db->prepare('SELECT * FROM flying_object');
 	$statement->execute();
 	// Go through each result
-	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-	{
-		echo '<p>';
-		echo '<strong>' . $row['obj_id'] . ' ' . $row['xloc'] . ':';
-		echo $row['yloc'] . '</strong>' . ' - ' . $row['xvel'];
-		echo '<br />';
-		echo '</p>';
-	}
-} 
-	catch (PDOException $ex) {
-		// If this were in production, you would not want to echo
-		// the details of the exception.
-		echo "Error connecting to DB. Details: $ex";
-		die();
-	}
-
+	$row = $statement->fetch(PDO::FETCH_ASSOC);
+        echo var_dump($row);
         ?>
         </div>
     </div>

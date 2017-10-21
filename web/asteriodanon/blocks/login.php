@@ -1,5 +1,5 @@
 <div class="container-fluid bg-3 text-center">
-    <form action="view/asteroidanon.php" method="post">
+    <form action="/asteriodanon/view/asteroidanon.php" method="post">
     <h3 class="margin">Login</h3><br>
       <div class="row">
         <div class="col-sm-6 form-group center">
