@@ -22,7 +22,8 @@
         //Display error with error page
     }
     echo var_dump($db);
-    $info = $db->query('SELECT * FROM asteroid;');
+    $info = $db->query('SELECT * FROM asteroid');
+    $info = $info->fetchAll();
     echo var_dump($info);
             ?>
         </div>
