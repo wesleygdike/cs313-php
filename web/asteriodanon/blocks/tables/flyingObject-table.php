@@ -10,7 +10,7 @@ $objs = getFlyingObj();
         <th>Rotation</th><th>Is Alive</th><th>Object Type Identifier</th>
     </tr>
 
-    <?php foreach ($objs as $row){ ?>
+    <?php foreach ($objs as $key => $row){ ?>
         <tr><td><?php $row['obj_id'] ?> </td>
         <tr><td><?php $row['xloc'] ?> </td>
         <tr><td><?php $row['yloc'] ?> </td>
