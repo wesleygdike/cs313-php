@@ -33,6 +33,14 @@ try{
 		echo '<br />';
 		echo '</p>';
 	}
+} 
+	catch (PDOException $ex) {
+		// If this were in production, you would not want to echo
+		// the details of the exception.
+		echo "Error connecting to DB. Details: $ex";
+		die();
+	}
+
         ?>
         </div>
     </div>
