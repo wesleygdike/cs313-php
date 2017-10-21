@@ -1,4 +1,3 @@
-<?php include __DIR__ . '/../info.php;' ?>
 <div class="container-fluid bg-3 text-center">
     <form action="view/asteroidanon.php" method="post">
     <h3 class="margin">Login</h3><br>
