@@ -90,14 +90,14 @@ function displayFlyingObj() {
     </tr>';
     foreach ((getFlyingObj()) as $row)
     {
-            echo '<tr><td>' . $row['obj_id'] . '</td>'. 
-                    '<td>' . $row['xloc'] . '</td>'.
-                    '<td>' . $row['yloc'] . '</td>'.
-                    '<td>' . $row['xvel'] . '</td>'.
-                    '<td>' . $row['yvel'] . '</td>'.
-                    '<td>' . $row['rotation'] . '</td>'.
-                    '<td>' . $row['is_alive'] . '</td>'.
-                    '<td>' . $row['obj_type'] . '</td></tr>';
+        echo '<tr><td>' . $row['obj_id'] . '</td>'. 
+                '<td>' . $row['xloc'] . '</td>'.
+                '<td>' . $row['yloc'] . '</td>'.
+                '<td>' . $row['xvel'] . '</td>'.
+                '<td>' . $row['yvel'] . '</td>'.
+                '<td>' . $row['rotation'] . '</td>'.
+                '<td>' . $row['is_alive'] . '</td>'.
+                '<td>' . $row['obj_type'] . '</td></tr>';
     }
 }
 
