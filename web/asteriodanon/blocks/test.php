@@ -16,14 +16,15 @@
 
     try{
     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     }
     catch (PDOException $ex) {
         echo 'Failed Database Connection';
         //Display error with error page
     }
     echo var_dump($db);
-    $info = $db->query('SELECT * FROM asteroid');
-    $info = $info->fetchAll();
+    $stmt = $db->prepare('SELECT * FROM flying_object');
+    $info = $stmt->fetch(PDO::FETCH_ASSOC);
     echo var_dump($info);
             ?>
         </div>
