@@ -1,3 +1,7 @@
+<?php 
+require_once __DIR__ . '/../controller/info.php';
+$flyingObj = getFlyingObj();
+?>
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -6,7 +10,7 @@
         <!-- Header Section -->
         <?php include __DIR__ . '/../blocks/header.php'; ?>
         <!-- Game info / canvas -->
-        <?php /*displayFlyingObj();*/ ?>
+        <?php echo $flyingObj; ?>
         <?php include __DIR__ . '/../blocks/footer.php'; ?>        
     </body>
 </html>
