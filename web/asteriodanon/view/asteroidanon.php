@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../controller/info.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 <?php include __DIR__ . '/../blocks/head.php';?>
