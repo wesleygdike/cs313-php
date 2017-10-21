@@ -1,8 +1,7 @@
       <?php  
 echo "<h2>FlyingObjects:</h2>";
         //make the table header
-        echo '<div>
-            <table>
+        echo '<table>
             <tr>
             <th>Object Id</th>
             <th>X location</th> 
