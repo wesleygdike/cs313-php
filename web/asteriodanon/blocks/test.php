@@ -22,6 +22,7 @@
         //Display error with error page
     }
     echo var_dump($db);
+    echo var_dump(($db->query('SELECT * FROM asteroid;')))
             ?>
         </div>
     </div>
