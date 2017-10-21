@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/../../controller.flyingObject-service.php';
+include __DIR__ . '/../controller.flyingObject-service.php';
 $objs = getFlyingObj();
 ?>
 <div class="container-fluid bg-3 text-center">
