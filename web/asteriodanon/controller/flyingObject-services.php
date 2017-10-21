@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/database-services.php';
+require __DIR__ . '/database-service.php';
 function getFlyingObj() {
     $db = databaseConn();
     //return $db->query('SELECT * FROM flying_object;');
