@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.html">Wesley G. Dike</a>
+      <a class="navbar-brand" href="/../../index.html">Wesley G. Dike</a>
     </div>
   </div>
 </nav>

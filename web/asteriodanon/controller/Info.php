@@ -25,7 +25,22 @@ function databaseConn() {
 
 function getFlyingObj() {
     $db = databaseConn();
-    return $db->query('SELECT * FROM flying_object;');
+    //return $db->query('SELECT * FROM flying_object;');
+     try {
+        $sql = "SELECT * FROM \"flying_object\"";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $info = $stmt->fetchAll();
+        $stmt->closeCursor();
+    } catch (PDOException $ex) {
+      //Display Error Msg.
+    }
+    if (is_array($info)) {
+        return $info;
+    } else {
+        //Display Error Msg.
+        exit();
+    }
 }
 
 function getAsteroid() {
@@ -64,7 +79,7 @@ function createUser($userName) {
 
 function getUserInput() {
     $db = databaseConn();
-    return $db->query('SELECT * FROM user;');
+    return $db->query('SELECT * FROM \"user\";');
 }
 
 function displayFlyingObj() {
