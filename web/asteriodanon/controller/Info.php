@@ -2,51 +2,6 @@
 /*
  * contains functions for working with and displaying database inforamtion
  */
-/* Returns a connection PDO object */
-function databaseConn() {
-    $dbUrl = getenv('DATABASE_URL');
-
-    $dbopts = parse_url($dbUrl);
-
-    $dbHost = $dbopts["host"];
-    $dbPort = $dbopts["port"];
-    $dbUser = $dbopts["user"];
-    $dbPassword = $dbopts["pass"];
-    $dbName = ltrim($dbopts["path"], '/');
-
-    try{
-    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-    }
-    catch (PDOException $ex) {
-        //Display error with error page
-    }
-    return $db;
-}
-
-function getFlyingObj() {
-    $db = databaseConn();
-    //return $db->query('SELECT * FROM flying_object;');
-     try {
-        $sql = "SELECT * FROM \"flying_object\"";
-        $stmt = $db->prepare($sql);
-        $stmt->execute();
-        $info = $stmt->fetchAll();
-        $stmt->closeCursor();
-    } catch (PDOException $ex) {
-      //Display Error Msg.
-    }
-    if (is_array($info)) {
-        return $info;
-    } else {
-        //Display Error Msg.
-        exit();
-    }
-}
-
-function getAsteroid() {
-    $db = databaseConn();
-    return $db->query('SELECT * FROM asteroid;');
-}
 
 function getGame() {
     $db = databaseConn();
@@ -82,25 +37,6 @@ function getUserInput() {
     return $db->query('SELECT * FROM \"user\";');
 }
 
-function displayFlyingObj() {
-    echo "<h2>FlyingObjects:</h2>";
-    echo '<div><table><tr><th>Object Id</th><th>X location</th> 
-        <th>Y location</th><th>X velocity</th><th>Y velocity</th>
-        <th>Rotation</th><th>Is Alive</th><th>Object Type Identifier</th>
-    </tr>';
-    foreach ((getFlyingObj()) as $row)
-    {
-        echo '<tr><td>' . $row['obj_id'] . '</td>'. 
-                '<td>' . $row['xloc'] . '</td>'.
-                '<td>' . $row['yloc'] . '</td>'.
-                '<td>' . $row['xvel'] . '</td>'.
-                '<td>' . $row['yvel'] . '</td>'.
-                '<td>' . $row['rotation'] . '</td>'.
-                '<td>' . $row['is_alive'] . '</td>'.
-                '<td>' . $row['obj_type'] . '</td></tr>';
-    }
-}
-
 function displayGame() {
     echo "<h2>Game:</h2>";
     //make the table header
@@ -116,12 +52,12 @@ function displayGame() {
 
     foreach ((getGame()) as $row)
     {
-        //add a row to the table for each flying_object
-            echo '<tr><td>' . $row['game_id'] . '</td>'. 
-                    '<td>' . $row['ship_count'] . '</td>'.
-                    '<td>' . $row['asteroid_count'] . '</td>'.
-                    '<td>' . $row['status'] . '</td>'.
-                    '<td>' . $row['user_count'] . '</td></tr>';
+    //add a row to the table for each flying_object
+        echo '<tr><td>' . $row['game_id'] . '</td>'. 
+                '<td>' . $row['ship_count'] . '</td>'.
+                '<td>' . $row['asteroid_count'] . '</td>'.
+                '<td>' . $row['status'] . '</td>'.
+                '<td>' . $row['user_count'] . '</td></tr>';
     }
 }
 
