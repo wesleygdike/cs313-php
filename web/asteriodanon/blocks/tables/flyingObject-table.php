@@ -1,5 +1,4 @@
 <?php
-include_once __DIR__ . '/../../controller.database-service.php';
 include_once __DIR__ . '/../../controller.flyingObject-service.php';
 $objs = getFlyingObj();
 ?>

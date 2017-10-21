@@ -1,10 +1,10 @@
 <?php
-
+require_once __DIR__ . '/database-services.php';
 function getFlyingObj() {
     $db = databaseConn();
     //return $db->query('SELECT * FROM flying_object;');
      try {
-        $sql = "SELECT * FROM \"flying_object\"";
+        $sql = "SELECT * FROM flying_object";
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $info = $stmt->fetchAll();
