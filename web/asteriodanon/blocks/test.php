@@ -6,7 +6,7 @@
             include __DIR__ . '/../controller/database-service.php';
             $db = databaseConn();
             include __DIR__ . '/../blocks/tables/flyingObject-table.php';
-        ?>
+            ?>
         </div>
     </div>
 </div>
