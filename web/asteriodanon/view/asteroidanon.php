@@ -6,7 +6,7 @@
         <?php include __DIR__ . '/../blocks/header.php'; ?>
         <!-- Game info / canvas -->
         <?php require_once __DIR__ . '/../controller/info.php'; ?>
-        <?php displayFlyingObj(); ?>
+        <?php /*displayFlyingObj();*/ ?>
         <?php include __DIR__ . '/../blocks/footer.php'; ?>        
     
 </html>
