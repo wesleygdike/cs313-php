@@ -7,6 +7,13 @@
             $db = databaseConn(); 
             ?>
             <?php include __DIR__ . '/../controller/user-service.php'; ?>
+            <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $userName = validateUserInput($_POST['name']); 
+                echo var_dump($userName);
+                createUser($userName);
+            }
+            ?>
 
         </div>
     </div>
