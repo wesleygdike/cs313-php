@@ -13,7 +13,7 @@
                 createUser($userName);
             }
             ?>
-
+            <?php include __DIR__ . '/../blocks/tables/users-table.php'; ?>
         </div>
     </div>
 </div>
