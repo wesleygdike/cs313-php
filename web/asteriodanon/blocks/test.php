@@ -2,10 +2,12 @@
     <h3 class="margin">Testing</h3><br>
     <div class="row">
         <div class="col-sm-4">
-            <?php include __DIR__ . '/../controller/database-service.php';
+            <!-- Display Flying Object table -->
+            <?php require __DIR__ . '/../controller/database-service.php';
             $db = databaseConn(); 
             ?>
-            <?php include __DIR__ . '/../blocks/tables/flyingObject-table.php';?>
+            <?php include __DIR__ . '/../controller/user-service.php'; ?>
+            <?php createUser($userName); ?>
         </div>
     </div>
 </div>
