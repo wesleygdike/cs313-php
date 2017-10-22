@@ -7,7 +7,7 @@ function createUser($userName){
     $sql = "INSERT INTO users (user_name, score, state) VALUES (?, 10, 1)";
     $stmt = $db->prepare($sql);
     $stmt->bindParam($userName);
-    if ($db->query($sql) === TRUE) {
+    if ($db->query($stmt) === TRUE) {
         echo 'User Created: ' . $userName;
     } else {
         echo 'NOT Able To Create User: ' . $userName;
