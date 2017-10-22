@@ -7,8 +7,9 @@ function createUser($userName){
     $sql = "INSERT INTO users (user_name, score, state) VALUES (".
             $userName . ", 10, 1)";
     try{
-        $db->exec($sql);
-        echo 'User Created: ' . $userName;
+        if($db->exec($sql) === TRUE){
+            echo 'User Created: ' . $userName;
+        }
     }
  catch (PDOException $e){
         echo 'NOT Able To Create User: ' . $userName . $e;
