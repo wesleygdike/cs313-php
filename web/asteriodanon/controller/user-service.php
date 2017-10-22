@@ -7,12 +7,21 @@ function createUser($userName){
     $sql = "INSERT INTO users (user_name, score, user_state) VALUES ('" .
             $userName. "', 10, 1);";
     try{
-        if($db->exec($sql) === TRUE){
-            echo 'User Created: ' . $userName;
-        }
+    $db->exec($sql);
     }
  catch (PDOException $e){
         echo 'NOT Able To Create User: ' . $userName . $e;
+    }
+}
+
+function clearUser(){
+    $db = databaseConn();
+    $sql = "DELETE FROM users;";
+    try{
+    $db->exec($sql);
+    }
+ catch (PDOException $e){
+        echo 'NOT Able To Delete User: ' . $userName . $e;
     }
 }
 
