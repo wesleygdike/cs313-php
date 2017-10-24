@@ -10,7 +10,7 @@
             <?php 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $userName = validateUserInput($_POST['name']); 
-                createUser($userName);
+                $_SESSION['user_id'] = createUser($userName);
             }
             ?>
             <?php include __DIR__ . '/../blocks/tables/users-table.php'; ?>
