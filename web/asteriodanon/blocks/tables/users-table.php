@@ -12,9 +12,9 @@
               <tr><td><?php echo $row['user_id']; ?></td>
                   <td><?php echo  $row['user_name']; ?></td>
                   <td><?php echo  $row['score']; ?></td>
-                  <!-- <td><?php /* echo  $row['flyingObject']; ?></td>
+                  <td><?php echo  $row['flyingObject']; ?></td>
                   <td><?php echo  $row['bullets']; ?></td>
-                  <td><?php echo  $row['user_input_id']; */ ?></td> -->
+                  <td><?php echo  $row['user_input_id']; ?></td>
                   <td><?php echo  $row['user_state']; ?></td>
               </tr>
           <?php } ?>

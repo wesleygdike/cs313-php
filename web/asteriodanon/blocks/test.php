@@ -6,13 +6,8 @@
             <?php require __DIR__ . '/../controller/database-service.php';
             $db = databaseConn(); 
             ?>
-            <?php include __DIR__ . '/../controller/user-service.php'; ?>
-            <?php 
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $userName = validateUserInput($_POST['name']); 
-                $_SESSION['user_id'] = createUser($userName);
-            }
-            ?>
+            <?php include __DIR__ . '/../blocks/tables/user_flyingObject-table.php'; ?>
+            <?php include __DIR__ . '/../blocks/tables/input-table.php'; ?>
             <?php include __DIR__ . '/../blocks/tables/users-table.php'; ?>
         </div>
     </div>

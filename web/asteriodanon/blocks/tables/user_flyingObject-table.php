@@ -7,14 +7,15 @@
           <th>Flying Object ID</th><th>Bullet Count</th><th>User Input ID</th>
           <th>User State</th></tr>
 
-          <?php foreach($db->query('SELECT * FROM users;') as $row) {?>
+          <?php foreach($db->query('SELECT * FROM users, flying_object '
+                  . 'WHERE flyingobject = obj_id;') as $row) {?>
               <!--add a row to the table for each flying_object-->
               <tr><td><?php echo $row['user_id']; ?></td>
                   <td><?php echo  $row['user_name']; ?></td>
                   <td><?php echo  $row['score']; ?></td>
-                  <!-- <td><?php /* echo  $row['flyingObject']; ?></td>
+                  <td><?php echo  $row['xvel']. ", " . $row['yvel']. ", " . $row['isAlive']; ?></td>
                   <td><?php echo  $row['bullets']; ?></td>
-                  <td><?php echo  $row['user_input_id']; */ ?></td> -->
+                  <td><?php echo  $row['user_input_id']; ?></td>
                   <td><?php echo  $row['user_state']; ?></td>
               </tr>
           <?php } ?>
