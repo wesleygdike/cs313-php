@@ -1,12 +1,15 @@
 
-var map = {}; //keep track of keys pressed
+var map = {};
 $(document).ready(function(){
-    $(document).keydown(changeKeyValue(event));
-    $(document).keyup(changeKeyValue(event));
+    $(document).keydown(function(event){ 
+        keyChanged(event);
+    });
+    $(document).keyup(function(event){ 
+        keyChanged(event);
+    });
 });
 
-
-
-function changeKeyValue(e){
-    map[e.keyCode] = e.type === 'keydown';
+function keyChanged(event) {
+map[event.key] = event.type == 'keydown';
+$("#fireValue").text("W Key: " + map['w'] + " -  E Key: " + map['e']);
 }
