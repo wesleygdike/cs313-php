@@ -2,6 +2,6 @@
    
 $(document).ready(function(){
     $(document).keypress(function(event){
-        $("#fireValue").text(event.key);
+        $("#fireValue").text(event.keys);
     });
 });
