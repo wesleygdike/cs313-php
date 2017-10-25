@@ -35,7 +35,7 @@ function createUser($userName){
     $db->exec($sql);
     $flyingObj_id = $db->lastInsertId();
     $sql = "INSERT INTO users (user_name, score, user_state, flyingobject, user_input_id) "
-            . "VALUES ('" .$userName. "', 0, 1, $flyingObj_id, $userInput_id);";
+            . "VALUES ('" .$userName. "', 0, 1, " . $flyingObj_id. "," . $userInput_id . ");";
     $db->exec($sql);
     $_SESSION['user_id'] = $db->lastInsertId();
 }
