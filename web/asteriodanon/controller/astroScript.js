@@ -8,7 +8,7 @@ $(document).ready(function(){
         keyChanged(event);
     });
     $("#testerBTN").click(function(){
-        $.get("operations/clearUsers.php", function(data, status){
+        $.get("./controller/operations/clearUsers.php", function(data, status){
            alert("Status of clearUser call: " + status); 
         });
     });
