@@ -20,7 +20,7 @@ function createInput($booster, $turn, $fire){
 /*
  * CLEAR entire user_input table of database
  */
-function clearFlyingObjs(){
+function clearInputs(){
     $db = databaseConn();
     $sql = "DELETE FROM user_input;";
     try{
@@ -34,9 +34,9 @@ function clearFlyingObjs(){
 /*
  * CLEAR user_input from table of database WHICH has $input_id
  */
-function clearFlyingObj($input_id){
+function clearInput($input_id){
     $db = databaseConn();
-    $sql = "DELETE FROM user_input"./*Insert the remainder of the WHICH*/";";
+    $sql = "DELETE FROM user_input WHERE input_id = $input_id;";
     try{
     $db->exec($sql);
     }

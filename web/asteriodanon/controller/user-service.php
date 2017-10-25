@@ -56,7 +56,7 @@ function clearUsers(){
  */
 function clearUser($user_id){
     $db = databaseConn();
-    $sql = "DELETE FROM users;";
+    $sql = "DELETE FROM users WHERE user_id = $user_id;";
     try{
     $db->exec($sql);
     }

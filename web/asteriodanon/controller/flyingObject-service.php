@@ -36,7 +36,7 @@ function clearFlyingObjs(){
  */
 function clearFlyingObj($flyingObj_id){
     $db = databaseConn();
-    $sql = "DELETE FROM flying_object"./*Insert the remainder of the WHICH*/";";
+    $sql = "DELETE FROM flying_object WHERE obj_id = $flyingObj_id;";
     try{
     $db->exec($sql);
     }

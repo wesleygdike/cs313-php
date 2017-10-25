@@ -9,6 +9,8 @@
             <?php include __DIR__ . '/../blocks/tables/user_flyingObject-table.php'; ?>
             <?php include __DIR__ . '/../blocks/tables/input-table.php'; ?>
             <?php include __DIR__ . '/../blocks/tables/users-table.php'; ?>
+            <?php $_SESSION['clear'] = "users"; ?>
+            <input type="button" onclick="removerUsers()" value="Reset Users" name="testerBTN" />
         </div>
     </div>
 </div>
