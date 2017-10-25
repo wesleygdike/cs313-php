@@ -1,6 +1,6 @@
 <?php 
 //Test User Name Input
-require_once 'user-services';
+require_once __DIR__ . '/../controller/user-service.php';
 $userName = validateUserInput($_POST['name']);
 createUser($userName);
 ?>
