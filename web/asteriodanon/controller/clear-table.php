@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<?php include __DIR__ . '/../blocks/head.php';?>
-    <body>
+<body>
 <?php
 
-require_once 'user-service.php';
-require_once 'flyingObject-service.php';
-require_once 'input-service.php';
+require_once __DIR__ . 'user-service.php';
+require_once __DIR__ . 'flyingObject-service.php';
+require_once __DIR__ . 'input-service.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
         if ($_GET['clear'] != NULL){
@@ -34,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     echo 'User Not Created';
     return FALSE;
 ?>
-    </body>
+</body>
 </html>
 
 
