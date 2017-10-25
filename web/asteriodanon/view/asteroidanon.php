@@ -1,6 +1,8 @@
 <?php 
 //Test User Name Input
-
+require_once 'user-services';
+$userName = validateUserInput($_POST['name']);
+createUser($userName);
 ?>
 
 <!DOCTYPE html>

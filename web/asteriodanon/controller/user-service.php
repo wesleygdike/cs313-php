@@ -26,14 +26,18 @@ function addUser(){
  */
 function createUser($userName){
     $db = databaseConn();
-    $sql = "INSERT INTO users (user_name, score, user_state) VALUES ('" .
-            $userName. "', 0, 1);";
-    try{
+        $sql = "INSERT INTO user_input (booster, turn, fire) "
+                . "VALUES (FALSE, 0, FALSE);";
     $db->exec($sql);
-    }
- catch (PDOException $e){
-        echo 'NOT Able To Create User: ' . $userName . $e;
-    }
+    $userInput_id = $db->lastInsertId();
+        $sql = "INSERT INTO flying_object (xloc, yloc, xvel, yvel, rotation, is_alive, obj_type) "
+                . "VALUES (0, 0, 0, 0, 90, TRUE, 0);";
+    $db->exec($sql);
+    $flyingObj_id = $db->lastInsertId();
+    $sql = "INSERT INTO users (user_name, score, user_state, flyingobject, user_input_id) "
+            . "VALUES ('" .$userName. "', 0, 1, $flyingObj_id, $userInput_id);";
+    $db->exec($sql);
+    $_SESSION['user_id'] = $db->lastInsertId();
 }
 
 /*

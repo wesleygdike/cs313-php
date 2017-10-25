@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
     $("#testerBTN").click(function(){
         $.get("../controller/operations/clearUsers.php", function(data, status){
-           alert("Status of clearUser call: " + status); 
+           //alert("Status of clearUser call: " + status); 
         });
     });
 });
