@@ -10,7 +10,7 @@
             <?php include __DIR__ . '/../blocks/tables/input-table.php'; ?>
             <?php include __DIR__ . '/../blocks/tables/users-table.php'; ?>
             <?php $_SESSION['clear'] = "users"; ?>
-            <input type="button" onclick="removerUsers()" value="Reset Users" name="testerBTN" />
+            <input type="button" onclick="removeUsers()" value="Reset Users" name="testerBTN" />
         </div>
     </div>
 </div>
