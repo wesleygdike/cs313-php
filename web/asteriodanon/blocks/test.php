@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-sm-4">
             <!-- Display Flying Object table -->
-            <?php require __DIR__ . '/../controller/database-service.php';
+            <?php require_once __DIR__ . '/../controller/database-service.php';
             $db = databaseConn(); 
             ?>
             <?php include __DIR__ . '/../blocks/tables/input-table.php'; ?>
