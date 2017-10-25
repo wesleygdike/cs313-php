@@ -7,6 +7,6 @@ function removeUsers() {
      //document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "/web/asteriodanon/controller/operations/clear-table.php", true);
+  xhttp.open("GET", "./clear-table.php", true);
   xhttp.send();
 }
