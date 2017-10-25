@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<?php include __DIR__ . '/../blocks/head.php';?>
+    <body>
 <?php
 
 require_once 'user-service.php';
@@ -29,6 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     }
     echo 'User Not Created';
     return FALSE;
-
+?>
+    </body>
+</html>
 
 
