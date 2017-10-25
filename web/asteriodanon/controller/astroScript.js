@@ -7,6 +7,11 @@ $(document).ready(function(){
     $(document).keyup(function(event){ 
         keyChanged(event);
     });
+    $("#testerBTN").click(function(){
+        $.get("operations/clearUsers.php", function(data, status){
+           alert("Status of clearUser call: " + status); 
+        });
+    });
 });
 
 function keyChanged(event) {
@@ -22,3 +27,4 @@ if (map['d']) {
 }
 $("#turnValue").text(turn);
 }
+
