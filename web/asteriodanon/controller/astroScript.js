@@ -1,7 +1,7 @@
 
    
 $(document).ready(function(){
-    $(document).keypress(function(e){
-        $("#fireValue").text(e.keys().toString());
+    $(document).keypress(function(event){
+        $("#fireValue").text(event.keyCode);
     });
 });
