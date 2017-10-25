@@ -6,8 +6,8 @@
             <?php require __DIR__ . '/../controller/database-service.php';
             $db = databaseConn(); 
             ?>
-            <?php include __DIR__ . '/../blocks/tables/user_flyingObject-table.php'; ?>
             <?php include __DIR__ . '/../blocks/tables/input-table.php'; ?>
+            <?php include __DIR__ . '/../blocks/tables/user_flyingObject-table.php'; ?>
             <?php include __DIR__ . '/../blocks/tables/users-table.php'; ?>
             <?php $_SESSION['clear'] = "users"; ?>
             <input type="button" onclick="removeUsers()" value="Reset Users" name="testerBTN" />
